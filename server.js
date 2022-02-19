@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors({ origin: 'https://todo-app-for-example.herokuapp.com/' }));
 
-const todoRouter = require('./src/routers/todo.routers');
+const todoRouter = require('./routers/todo.routers');
 
 app.use('/api', todoRouter);
 

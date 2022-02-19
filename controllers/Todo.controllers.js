@@ -1,7 +1,6 @@
 const createError = require('http-errors');
-const { Op } = require('sequelize');
 
-const { Todo } = require('../../db/models');
+const { Todo } = require('../db/models');
 
 // POST
 const createTodo = async (req, res, next) => {

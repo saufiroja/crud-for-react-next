@@ -16,11 +16,5 @@ module.exports = {
     acquire: 30000,
     idle: 10000,
   },
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
   timezone: '+08:00',
 };
