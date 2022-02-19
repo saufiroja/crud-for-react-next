@@ -14,7 +14,7 @@ require('./db/models/sequelize');
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors((origin = 'https://todo-app-for-example.herokuapp.com/api')));
+app.use(cors({ origin: '*' }));
 
 const todoRouter = require('./src/routers/todo.routers');
 
