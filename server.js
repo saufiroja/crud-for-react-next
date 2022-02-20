@@ -11,10 +11,16 @@ const { PORT } = process.env;
 
 require('./db/models/sequelize');
 
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+app.use(cors(corsOptions));
 
 const todoRouter = require('./routers/todo.routers');
 
