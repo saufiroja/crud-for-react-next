@@ -14,7 +14,7 @@ require('./db/models/sequelize');
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://todo-app-e3b253.netlify.app' }));
 
 const todoRouter = require('./routers/todo.routers');
 
